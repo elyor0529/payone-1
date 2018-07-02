@@ -1,0 +1,17 @@
+{
+    "name": "ideenkonzept/laravel-payone",
+    "description": "A laravel package for the payone server api",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "authors": [{
+        "name": "Ahmed Dabak",
+        "email": "ahmed@2nh.de"
+    }],
+    "autoload": {
+        "psr-4": {
+            "Ideenkonzept\\Payone\\": "src/"
+        }
+    }
+}
