@@ -32,7 +32,7 @@ use Ideenkonzept\Payone\Currency;
 use ideenkonzept\Payone\Payone as Client;
 
 $payone_client = new Client();
-$payone_client->from($customer)->creditCard(5.00, Currency:php:USDollar);
+$payone_client->from($customer)->creditCard(5.00, Currency::USDollar);
 ```
 
 
