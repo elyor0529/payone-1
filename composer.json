@@ -1,5 +1,5 @@
 {
-    "name": "ideenkonzept/laravel-payone",
+    "name": "ideenkonzept/payone",
     "description": "A laravel package for the payone server api",
     "type": "library",
     "license": "MIT",
