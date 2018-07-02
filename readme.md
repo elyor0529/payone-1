@@ -23,7 +23,7 @@ PAYONE_KEY=
 ```php
 use Ideenkonzept\Payone\Currency;
 
-\Payone::from($customer)->creditCard(1.00, Currency::Euro);
+\Payone::from($customer)->directDiebt(1.00, Currency::Euro);
 ```
 
 ### Normal php
@@ -32,7 +32,7 @@ use Ideenkonzept\Payone\Currency;
 use ideenkonzept\Payone\Payone as Client;
 
 $payone_client = new Client();
-$payone_client->from($customer)->creditCard(1.00, Currency::Euro);
+$payone_client->from($customer)->creditCard(5.00, Currency:php:USDollar);
 ```
 
 
