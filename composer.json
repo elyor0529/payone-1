@@ -2,6 +2,7 @@
     "name": "ideenkonzept/laravel-payone",
     "description": "A laravel package for the payone server api",
     "type": "library",
+    "license": "MIT",
     "require": {
         "guzzlehttp/guzzle": "^6.3"
     },
