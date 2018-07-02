@@ -29,7 +29,7 @@ class Payone
         return array_merge(
             $this->parameters,
             ['reference' => uniqid()],
-            config('payone.defaults')
+            config('payone.credentials')
         );
     }
 

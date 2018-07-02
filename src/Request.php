@@ -18,7 +18,7 @@ class Request
     {
         $client = new Client();
 
-        if ($response = $client->post(config('payone.server_api_url'), ['form_params' => $parameters])) {
+        if ($response = $client->post(config('payone.api.url'), ['form_params' => $parameters])) {
             return self::parseResponse($response);
         }
 
