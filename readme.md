@@ -62,7 +62,7 @@ $payone = new Payone();
 
 $response = $payone->customer( $customer )
                     ->directDebit( [ 'iban' => 'DE85123456782599100003', 'bic' => 'TESTTEST' ] )
-                    ->authorize( 10, null, uniqid() );
+                    ->authorize( $amount = 10, $currency = null, uniqid() );
                     
 ```
 OR
@@ -72,7 +72,7 @@ $response = $payone->customer( $customer )
                        'cardpan'        => '4111111111111111',
                        'cardcvc2'       => '123',
                        'cardexpiredate' => '2010',
-                   ] )->authorize( 10 );
+                   ] )->authorize( $amount = 45 );
 
 ```
 
