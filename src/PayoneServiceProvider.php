@@ -21,8 +21,8 @@ class PayoneServiceProvider extends ServiceProvider
             __DIR__ . '/../config/payone.php', 'payone'
         );
 
-        $this->app->singleton('payone', function ($app) {
-            return new Payone;
+        $this->app->bind('payone', function ($app) {
+            return new Client;
         });
     }
 

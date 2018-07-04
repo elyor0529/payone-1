@@ -1,18 +1,28 @@
 {
-    "name": "ideenkonzept/payone",
-    "description": "A laravel package for the payone server api",
-    "type": "library",
-    "license": "MIT",
-    "require": {
-        "guzzlehttp/guzzle": "^6.3"
-    },
-    "authors": [{
-        "name": "Ahmed Dabak",
-        "email": "ahmed@2nh.de"
-    }],
-    "autoload": {
-        "psr-4": {
-            "Ideenkonzept\\Payone\\": "src/"
-        }
-    }
+	"name": "ideenkonzept/payone",
+	"description": "A laravel package for the payone server api",
+	"type": "library",
+	"license": "MIT",
+	"require": {
+		"guzzlehttp/guzzle": "^6.3"
+	},
+	"require-dev": {
+		"orchestra/testbench": "~3.0"
+	},
+	"authors": [
+		{
+			"name": "Ahmed Dabak",
+			"email": "ahmed@2nh.de"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Ideenkonzept\\Payone\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Ideenkonzept\\Payone\\Tests\\": "tests/"
+		}
+	}
 }
