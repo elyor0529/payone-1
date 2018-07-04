@@ -23,6 +23,7 @@ PAYONE_KEY=
 
 ```php
 $payone = new Client();
+
 $response = $payone->request( [
     'firstname'       => 'John',
     'lastname'        => 'Snow',
@@ -46,6 +47,8 @@ $response = $payone->request( [
 We also provide a cool request builder, with a fluent api.
 
 ```php
+use Ideenkonzept\Payone\PayoneBuilder;
+
 $customer = [
     'firstname'       => 'John',
     'lastname'        => 'Snow',
@@ -58,7 +61,7 @@ $customer = [
 ];
 
 
-$payone = new Payone();
+$payone =  new PayoneBuilder();
 
 $response = $payone->customer( $customer )
                     ->directDebit( [ 'iban' => 'DE85123456782599100003', 'bic' => 'TESTTEST' ] )
@@ -67,21 +70,19 @@ $response = $payone->customer( $customer )
 ```
 OR
 ```php
+use Ideenkonzept\Payone\PayoneBuilder;
+use Ideenkonzept\Payone\Utils\Card;
+use Ideenkonzept\Payone\Utils\Currency;
+
+$payone =  new PayoneBuilder();
+
 $response = $payone->customer( $customer )
                    ->creditCard( Card::Visa, [
                        'cardpan'        => '4111111111111111',
                        'cardcvc2'       => '123',
                        'cardexpiredate' => '2010',
-                   ] )->authorize( $amount = 45 );
+                   ] )->authorize( $amount = 45 , Currency::Euro);
 
-```
-
-### Using Facades
-
-```php
-use Ideenkonzept\Payone\Currency;
-
-\Payone::from($customer)->directDiebt(1.00, Currency::Euro);
 ```
 
 ## Licence
